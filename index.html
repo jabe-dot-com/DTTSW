@@ -52,9 +52,9 @@
 
   	<!-- EXTRASOURCES -->
     <!-- Loads the Javascript code...-->
-    <script src="src/RuntimeDev.js"></script>
+    <script src="src/Runtime.js"></script>
 
-    <script>
+  <script>
 
 	// Detection of when the html file is ran locally.
 	// You can remove this code for the final version
@@ -69,7 +69,6 @@
 		document.write('</div>');
 		throw new error("Cannot run application");
 	}
-
   </script>
 </head>
 
@@ -81,20 +80,19 @@
     </canvas>
 </div>
 
-
-    <script>
-        // RUNTIMESTART
-        // This is where the HTML5 runtime is actually started
-        window.addEventListener("load", windowLoaded, false);
-        function windowLoaded()
-        {
-            // Calls the runtime
-            // First parameter : name of the canvas element
-            // Second parameter : path to the cch file. Images and sounds must lay beside this file
-            new RuntimeDev("MMFCanvas", "resources/Don't Touch the Sine Wave ver1.0.cch");
-        }
-        // RUNTIMESTARTEND
-    </script>
+<script>
+    // RUNTIMESTART
+    // This is where the HTML5 runtime is actually started
+    window.addEventListener("load", windowLoaded, false);
+    function windowLoaded()
+    {
+        // Calls the runtime
+        // First parameter : name of the canvas element
+        // Second parameter : path to the cch file. Images and sounds must lay beside this file
+        new Runtime("MMFCanvas", "resources/Don't Touch the Sine Wave ver1.0.cch");
+    }
+    // RUNTIMESTARTEND
+</script>
 
 </body>
 </html>
